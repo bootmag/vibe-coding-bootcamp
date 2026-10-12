@@ -52,3 +52,69 @@ body {
   background: var(--color-accent);
   border-radius: 2px;
 }
+
+/* ── Persönlicher Orientierungspfad ── */
+
+.orientation-path {
+  width: min(100%, 680px);
+  padding: 1.5rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 1.25rem;
+  background: #F9FAFB;
+  box-shadow: 0 12px 36px rgb(26 26 46 / 8%);
+}
+
+.orientation-label {
+  margin: 0 0 1rem;
+  color: #6B7280;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.orientation-path ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.orientation-path li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-width: 0;
+  padding: 0.8rem 0.65rem;
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: var(--color-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.step-number {
+  display: grid;
+  flex: 0 0 auto;
+  width: 1.55rem;
+  height: 1.55rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .orientation-path ol {
+    grid-template-columns: 1fr;
+  }
+
+  .orientation-path li {
+    justify-content: flex-start;
+  }
+}
